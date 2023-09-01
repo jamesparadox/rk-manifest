@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="rockchip_android"
+          fetch="https://gitlab.com/rockchip_android_r" />
+
+  <remote name="rockchip_android_r"
+          fetch="https://gitlab.com/rockchip_android_r"
+          revision="refs/tags/android-11.0-mid-rkr11" />
+
+  <!-- Device repos -->
+  <project name="rk/device/rockchip/rk3288" path="device/rockchip/rk3288" remote="rockchip_android_r" />
+  <project name="rk/device/rockchip/rk3326" path="device/rockchip/rk3326" remote="rockchip_android_r" />
+  <project name="rk/device/rockchip/rk3328" path="device/rockchip/rk3328" remote="rockchip_android_r" />
+  <project name="rk/device/rockchip/rk3399" path="device/rockchip/rk3399" remote="rockchip_android_r" />
+  <project name="rk/device/rockchip/rk3566" path="device/rockchip/rk356x" remote="rockchip_android_r" />
+  <project name="rk/device/rockchip/rk3568_box" path="device/rockchip/rk356x_box" remote="rockchip_android_r" />
+  <project name="rk/device/rockchip/rksdk" path="device/rockchip/common" remote="rockchip_android" revision="refs/tags/android-11.0-mid-rkr11.1" >
+    <copyfile dest=".classpath" src=".classpath"/>
+    <copyfile dest="mkimage.sh" src="mkimage.sh"/>
+    <copyfile dest="javaenv.sh" src="javaenv.sh"/>
+    <copyfile dest="build.sh" src="build/rockchip/build.sh"/>
+    <copyfile dest="mkimage_ab.sh" src="mkimage_ab.sh"/>
+  </project>
+
+  <!-- Docs -->
+  <project name="docs/android" path="RKDocs/android" remote="rockchip_android_r" />
+  <project name="docs/common" path="RKDocs/common" remote="rockchip_android" revision="refs/tags/android-11.0-mid-rkr11.1" />
+
+  <!-- External repos -->
+  <project name="external/camera_engine_rkaiq" remote="rockchip_android_r" />
+  <project name="platform/external/e2fsprogs" path="external/e2fsprogs" remote="rockchip_android_r" />
+  <project name="platform/external/f2fs-tools" path="external/f2fs-tools" remote="rockchip_android_r" />
+  <project groups="pdk" name="platform/external/iperf3" path="external/iperf3" remote="rockchip_android_r" />
+  <project name="platform/external/libdrm" path="external/libdrm" remote="rockchip_android_r" />
+  <project groups="pdk,qcom_msm8x26" name="platform/external/skia" path="external/skia" remote="rockchip_android_r" />
+  <project name="platform/external/speex" path="external/speex" remote="rockchip_android_r" />
+  <project name="platform/external/sqlite" path="external/sqlite" remote="rockchip_android_r" />
+  <project groups="pdk" name="platform/external/tinyalsa" path="external/tinyalsa" remote="rockchip_android_r" />
+  <project name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8" remote="rockchip_android_r" />
+  <project name="rk/platform/external/abc" path="external/abc" remote="rockchip_android_r" />
+  <project name="rk/platform/external/io" path="external/io" remote="rockchip_android_r" />
+  <project name="rk/platform/external/ntfs-3g" path="external/ntfs-3g" remote="rockchip_android_r" />
+  <project name="rk/platform/external/usb_modeswitch" path="external/usb_modeswitch" remote="rockchip_android_r" />
+  <project name="rk/platform/system/rk_tee_user" path="external/rk_tee_user" remote="rockchip_android_r" />
+  <project name="linux/app/rkaiq_tool_server" path="external/rkaiq_tool_server" remote="rockchip_android_r" />
+  <project name="rk/rktoolbox" path="external/rktoolbox" remote="rockchip_android_r" />
+
+  <!-- Framework repos -->
+  <project groups="pdk" name="platform/frameworks/av" path="frameworks/av" remote="rockchip_android_r" />
+  <project name="platform/frameworks/base" path="frameworks/base" remote="rockchip_android_r" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/ex" path="frameworks/ex" remote="rockchip_android_r" />
+  <project groups="pdk" name="platform/frameworks/native" path="frameworks/native" remote="rockchip_android_r" />
+  <project name="platform/frameworks/opt/net/ethernet" path="frameworks/opt/net/ethernet" remote="rockchip_android_r" />
+  <project name="platform/frameworks/opt/net/wifi" path="frameworks/opt/net/wifi" remote="rockchip_android_r" />
+  <project name="platform/frameworks/opt/telephony" path="frameworks/opt/telephony" remote="rockchip_android_r" />
+
+  <!-- General repos -->
+  <project name="platform/bionic" path="bionic" remote="rockchip_android_r" />
+  <project name="platform/bootable/recovery/recovery" path="bootable/recovery" remote="rockchip_android_r" />
+  <project name="platform/bootable/recovery/mtd_utils" path="bootable/recovery/mtdutils" remote="rockchip_android_r" />
+  <project name="platform/bootable/recovery/rk_update" path="bootable/recovery/rkupdate" remote="rockchip_android_r" />
+  <project name="platform/bootable/recovery/rk_utility" path="bootable/recovery/rkutility" remote="rockchip_android_r" />
+  <project groups="pdk" name="platform/build/build" path="build/make" remote="rockchip_android_r" >
+    <copyfile dest="Makefile" src="core/root.mk"/>
+    <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk"/>
+    <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default"/>
+    <linkfile dest="build/core" src="core"/>
+    <linkfile dest="build/envsetup.sh" src="envsetup.sh"/>
+    <linkfile dest="build/target" src="target"/>
+    <linkfile dest="build/tools" src="tools"/>
+  </project>
+  <project groups="pdk,tradefed" name="platform/build/soong" path="build/soong" remote="rockchip_android_r" >
+    <linkfile dest="Android.bp" src="root.bp"/>
+    <linkfile dest="bootstrap.bash" src="bootstrap.bash"/>
+  </project>
+  <project name="platform/development" path="development" remote="rockchip_android_r" />
+  <project name="platform/mkcombinedroot" path="mkcombinedroot" remote="rockchip_android_r" />
+  <project name="rk/platform/external/rk-pcba-test" path="bootable/recovery/pcba_core" remote="rockchip_android_r" />
+  <project name="rk/platform/vendor/Widevine" path="vendor/widevine" remote="rockchip_android_r" />
+  <project name="rk/platform/vendor/rockchip/common" path="vendor/rockchip/common" remote="rockchip_android" revision="Android11_Radxa_rk11" />
+  <project name="rk/platform/vendor/rockchip/hardware" path="vendor/rockchip/hardware" remote="rockchip_android_r" />
+  <project name="rk/rkbin" path="rkbin" remote="rockchip_android_r" />
+  <project name="rk/rkst" path="rkst" remote="rockchip_android_r" />
+  <project name="rk/u-boot" path="u-boot" remote="rockchip_android" revision="refs/tags/android-11.0-mid-rkr11.2" />
+
+  <!-- Hardware repos -->
+  <project groups="pdk" name="platform/hardware/broadcom/libbt" path="hardware/broadcom/libbt" remote="rockchip_android_r" />
+  <project groups="pdk,broadcom_wlan" name="platform/hardware/broadcom/wlan" path="hardware/broadcom/wlan" remote="rockchip_android_r" />
+  <project name="platform/hardware/interfaces" path="hardware/interfaces" remote="rockchip_android_r" />
+  <project name="platform/hardware/libhardware" path="hardware/libhardware" remote="rockchip_android_r" />
+  <project name="platform/hardware/realtek" path="hardware/realtek" remote="rockchip_android_r" />
+  <project name="rk/hardware/libgralloc/bifrost" path="hardware/rockchip/libgralloc/bifrost" remote="rockchip_android_r" />
+  <project name="rk/hardware/libgralloc/midgard" path="hardware/rockchip/libgralloc/midgard" remote="rockchip_android_r" />
+  <project name="rk/hardware/libgralloc/utgard_new" path="hardware/rockchip/libgralloc/utgard" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/audio" path="hardware/rockchip/audio" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/bootctrl" path="hardware/rockchip/bootctrl" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/camera_engine_rkisp" path="hardware/rockchip/camera_engine_rkisp" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/camera_v3" path="hardware/rockchip/camera" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/drmservice" path="hardware/rockchip/drmservice" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/fastbootd" path="hardware/rockchip/fastbootd" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/gatekeeper" path="hardware/rockchip/gatekeeper" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/hdmicec" path="hardware/rockchip/hdmicec" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/hwcomposer_rga" path="hardware/rockchip/hwcomposer/drmhwc" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/jpeghw" path="hardware/rockchip/jpeghw" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/keymaster4" path="hardware/rockchip/keymaster4" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/libbaseparameter" path="hardware/rockchip/libbaseparameter" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/libgraphicpolicy" path="hardware/rockchip/libgraphicpolicy" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/libhwjpeg" path="hardware/rockchip/libhwjpeg" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/libiep" path="hardware/rockchip/libiep" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/libmemtrack" path="hardware/rockchip/libmemtrack" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/mpi-mmz" path="hardware/rockchip/libmpimmz" remote="rockchip_android_r" />
+  <project name="linux/linux-rga" path="hardware/rockchip/librga" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/librkvpu" path="hardware/rockchip/librkvpu" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/lights_aidl" path="hardware/rockchip/light_aidl" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/omx_il" path="hardware/rockchip/omx_il" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/optee" path="hardware/rockchip/optee" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/power_aidl" path="hardware/rockchip/power_aidl" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/sensor" path="hardware/rockchip/sensor" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/swiftshader" path="hardware/rockchip/swiftshader" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/thermal" path="hardware/rockchip/thermal" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/weaver" path="hardware/rockchip/weaver" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk35/einkhwc" path="hardware/rockchip/hwcomposer/einkhwc" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk35/helper" path="hardware/rockchip/helper" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk35/hwcomposer2" path="hardware/rockchip/hwcomposer/drmhwc2" remote="rockchip_android_r" />
+  <project name="rk/rknn_server" path="hardware/rockchip/rknn_server" remote="rockchip_android_r" />
+
+  <!-- Kernel repos -->
+  <project name="rk/kernel" path="kernel" remote="rockchip_android_r" />
+  <project name="kernel/configs" remote="rockchip_android_r" >
+    <linkfile dest="kernel/kernel/configs/android-11.config" src="rockchip/android-11.config" />
+    <linkfile dest="kernel/kernel/configs/android-11-go.config" src="rockchip/android-11-go.config" />
+    <linkfile dest="kernel/kernel/configs/rk3326.config" src="rockchip/rk3326.config" />
+    <linkfile dest="kernel/kernel/configs/rk356x.config" src="rockchip/rk3326.config" />
+    <linkfile dest="kernel/kernel/configs/rk356x_evb.config" src="rockchip/rk356x_evb.config" />
+    <linkfile dest="kernel/kernel/configs/rk356x_eink.config" src="rockchip/rk356x_eink.config" />
+    <linkfile dest="kernel/kernel/configs/rk3399.config" src="rockchip/rk3399.config" />
+    <linkfile dest="kernel/kernel/configs/non_debuggable.config" src="r/android-4.19/non_debuggable.config" />
+  </project>
+
+  <!-- Packages -->
+  <project name="platform/packages/apps/Bluetooth" path="packages/apps/Bluetooth" remote="rockchip_android_r" />
+  <project groups="pdk-fs" name="platform/packages/apps/Camera2" path="packages/apps/Camera2" remote="rockchip_android_r" />
+  <project groups="pdk-fs" name="platform/packages/apps/DeskClock" path="packages/apps/DeskClock" remote="rockchip_android_r" />
+  <project name="platform/packages/apps/ExactCalculator" path="packages/apps/ExactCalculator" remote="rockchip_android_r" />
+  <project groups="pdk-fs" name="platform/packages/apps/Gallery2" path="packages/apps/Gallery2" remote="rockchip_android_r" />
+  <project groups="pdk-fs" name="platform/packages/apps/Launcher3" path="packages/apps/Launcher3" remote="rockchip_android_r" />
+  <project groups="pdk-fs" name="platform/packages/apps/Music" path="packages/apps/Music" remote="rockchip_android_r" />
+  <project groups="pdk-fs" name="platform/packages/apps/Settings" path="packages/apps/Settings" remote="rockchip_android_r" />
+  <project groups="pdk-fs" name="platform/packages/apps/SoundRecorder" path="packages/apps/SoundRecorder" remote="rockchip_android_r" />
+  <project name="platform/packages/apps/TvSettings" path="packages/apps/TvSettings" remote="rockchip_android_r" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/modules/NetworkStack" path="packages/modules/NetworkStack" remote="rockchip_android_r" />
+  <project name="platform/packages/providers/MediaProvider" path="packages/providers/MediaProvider" remote="rockchip_android_r" />
+  <project name="platform/packages/services/Telephony" path="packages/services/Telephony" remote="rockchip_android_r" />
+  <project name="rk/packages/apps/DisplayAdjust" path="packages/apps/DisplayAdjust" remote="rockchip_android_r" />
+
+  <!-- Prebuilts -->
+  <project name="rk/prebuilts/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" remote="rockchip_android" revision="master"/>
+  <project name="rk/prebuilts/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf" path="prebuilts/gcc/linux-x86/arm/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf" remote="rockchip_android" revision="master"/>
+
+  <!-- System repos -->
+  <project name="platform/system/core" path="system/core" remote="rockchip_android_r" />
+  <project name="platform/system/libhwbinder" path="system/libhwbinder" remote="rockchip_android_r" />
+  <project name="platform/system/memory/libion" path="system/memory/libion" remote="rockchip_android_r" />
+  <project name="platform/system/netd" path="system/netd" remote="rockchip_android_r" />
+  <project name="platform/system/tools/release_tools" path="system/tools/release_tools" remote="rockchip_android_r" >
+    <copyfile dest="restore_patches.sh" src="restore_patches.sh"/>
+  </project>
+  <project name="platform/system/vold" path="system/vold" remote="rockchip_android_r" />
+
+  <!-- Tools -->
+  <project name="RKTools" remote="rockchip_android_r" />
+
+</manifest>
