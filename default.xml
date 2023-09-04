@@ -1322,6 +1322,9 @@
   <!-- Remove unused AOSP repos -->
   <include name="snippets/remove.xml" />
 
+  <!-- Track some Rockchip repos -->
+  <include name="snippets/rockchip.xml" />
+
   <!--
     Merge marker to make it easier for git to merge AOSP-only manifest
     changes to a custom manifest.  Please keep this marker here and
