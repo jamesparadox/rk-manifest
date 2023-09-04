@@ -61,7 +61,7 @@
   <project name="platform/bootable/recovery/mtd_utils" path="bootable/recovery/mtdutils" remote="rockchip_android_r" />
   <project name="platform/bootable/recovery/rk_update" path="bootable/recovery/rkupdate" remote="rockchip_android_r" />
   <project name="platform/bootable/recovery/rk_utility" path="bootable/recovery/rkutility" remote="rockchip_android_r" />
-  <project groups="pdk" name="platform/build/build" path="build/make" remote="rockchip_android_r" >
+  <project groups="pdk" name="platform/build/build" path="build/make" remote="rockchip_android" revision="refs/tags/android-12.0.0_r32" >
     <copyfile dest="Makefile" src="core/root.mk"/>
     <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk"/>
     <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default"/>
