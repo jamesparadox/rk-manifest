@@ -128,7 +128,6 @@
   <project name="rk/hardware/rk35/einkhwc" path="hardware/rockchip/hwcomposer/einkhwc" remote="rockchip_android_s" />
   <project name="rk/hardware/rk35/helper" path="hardware/rockchip/helper" remote="rockchip_android_s" />
   <project name="rk/hardware/rk35/hwcomposer2" path="hardware/rockchip/hwcomposer/drmhwc2" remote="rockchip_android_s" />
-  <project name="rk/rknn_server" path="hardware/rockchip/rknn_server" remote="rockchip_android_s" />
 
   <!-- Kernel repos -->
   <project name="rk/kernel" path="kernel" remote="rockchip_android_s" />
