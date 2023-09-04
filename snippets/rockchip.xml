@@ -36,7 +36,6 @@
   <project name="platform/external/libdrm" path="external/libdrm" remote="rockchip_android_s" />
   <project groups="pdk,qcom_msm8x26" name="platform/external/skia" path="external/skia" remote="rockchip_android_s" />
   <project name="platform/external/speex" path="external/speex" remote="rockchip_android_s" />
-  <project name="platform/external/sqlite" path="external/sqlite" remote="rockchip_android_s" />
   <project groups="pdk" name="platform/external/tinyalsa" path="external/tinyalsa" remote="rockchip_android_s" />
   <project name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8" remote="rockchip_android_s" />
   <project name="rk/platform/external/abc" path="external/abc" remote="rockchip_android_s" />
@@ -54,7 +53,6 @@
   <project groups="pdk" name="platform/frameworks/native" path="frameworks/native" remote="rockchip_android_s" />
   <project name="platform/frameworks/opt/net/ethernet" path="frameworks/opt/net/ethernet" remote="rockchip_android_s" />
   <project name="platform/frameworks/opt/net/wifi" path="frameworks/opt/net/wifi" remote="rockchip_android_s" />
-  <project name="platform/frameworks/opt/telephony" path="frameworks/opt/telephony" remote="rockchip_android_s" />
 
   <!-- General repos -->
   <project name="platform/bionic" path="bionic" remote="rockchip_android_s" />
@@ -76,7 +74,16 @@
     <linkfile dest="bootstrap.bash" src="bootstrap.bash"/>
   </project>
   <project name="platform/development" path="development" remote="rockchip_android_s" />
-  <project name="platform/mkcombinedroot" path="mkcombinedroot" remote="rockchip_android_s" />
+  <project name="platform/mkcombinedroot" path="mkcombinedroot" remote="rockchip_android_s" >
+      <linkfile src="configs/android-11.config" dest="kernel-4.19/kernel/configs/android-11.config"/>
+      <linkfile src="configs/android-11.config" dest="kernel-5.10/kernel/configs/android-11.config"/>
+      <linkfile src="configs/android-11-go.config" dest="kernel-4.19/kernel/configs/android-11-go.config"/>
+      <linkfile src="configs/android-11-go.config" dest="kernel-5.10/kernel/configs/android-11-go.config"/>
+      <linkfile src="configs/disable_incfs.config" dest="kernel-4.19/kernel/configs/disable_incfs.config"/>
+      <linkfile src="configs/non_debuggable.config" dest="kernel-4.19/kernel/configs/non_debuggable.config"/>
+      <linkfile src="configs/non_debuggable.config" dest="kernel-5.10/kernel/configs/non_debuggable.config"/>
+      <linkfile src="configs/pcie_wifi.config" dest="kernel-5.10/kernel/configs/pcie_wifi.config"/>
+  </project>
   <project name="rk/platform/external/rk-pcba-test" path="bootable/recovery/pcba_core" remote="rockchip_android_s" />
   <project name="rk/platform/vendor/Widevine" path="vendor/widevine" remote="rockchip_android_s" />
   <project name="rk/platform/vendor/rockchip/common" path="vendor/rockchip/common" remote="rockchip_android_s" />
@@ -128,16 +135,6 @@
 
   <!-- Kernel repos -->
   <project name="rk/kernel" path="kernel" remote="rockchip_android_s" />
-  <project name="kernel/configs" remote="rockchip_android_s" >
-    <linkfile dest="kernel/kernel/configs/android-11.config" src="rockchip/android-11.config" />
-    <linkfile dest="kernel/kernel/configs/android-11-go.config" src="rockchip/android-11-go.config" />
-    <linkfile dest="kernel/kernel/configs/rk3326.config" src="rockchip/rk3326.config" />
-    <linkfile dest="kernel/kernel/configs/rk356x.config" src="rockchip/rk3326.config" />
-    <linkfile dest="kernel/kernel/configs/rk356x_evb.config" src="rockchip/rk356x_evb.config" />
-    <linkfile dest="kernel/kernel/configs/rk356x_eink.config" src="rockchip/rk356x_eink.config" />
-    <linkfile dest="kernel/kernel/configs/rk3399.config" src="rockchip/rk3399.config" />
-    <linkfile dest="kernel/kernel/configs/non_debuggable.config" src="r/android-4.19/non_debuggable.config" />
-  </project>
 
   <!-- Packages -->
   <project name="platform/packages/apps/Bluetooth" path="packages/apps/Bluetooth" remote="rockchip_android_s" />
@@ -152,7 +149,6 @@
   <project name="platform/packages/apps/TvSettings" path="packages/apps/TvSettings" remote="rockchip_android_s" />
   <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/modules/NetworkStack" path="packages/modules/NetworkStack" remote="rockchip_android_s" />
   <project name="platform/packages/providers/MediaProvider" path="packages/providers/MediaProvider" remote="rockchip_android_s" />
-  <project name="platform/packages/services/Telephony" path="packages/services/Telephony" remote="rockchip_android_s" />
   <project name="rk/packages/apps/DisplayAdjust" path="packages/apps/DisplayAdjust" remote="rockchip_android_s" />
 
   <!-- Prebuilts -->
@@ -161,9 +157,7 @@
 
   <!-- System repos -->
   <project name="platform/system/core" path="system/core" remote="rockchip_android_s" />
-  <project name="platform/system/libhwbinder" path="system/libhwbinder" remote="rockchip_android_s" />
   <project name="platform/system/memory/libion" path="system/memory/libion" remote="rockchip_android_s" />
-  <project name="platform/system/netd" path="system/netd" remote="rockchip_android_s" />
   <project name="platform/system/tools/release_tools" path="system/tools/release_tools" remote="rockchip_android_s" >
     <copyfile dest="restore_patches.sh" src="restore_patches.sh"/>
   </project>
