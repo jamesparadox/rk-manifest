@@ -43,7 +43,6 @@
   <project name="rk/platform/external/ntfs-3g" path="external/ntfs-3g" remote="rockchip_android_s" />
   <project name="rk/platform/external/usb_modeswitch" path="external/usb_modeswitch" remote="rockchip_android_s" />
   <project name="rk/platform/system/rk_tee_user" path="external/rk_tee_user" remote="rockchip_android_s" />
-  <project name="linux/app/rkaiq_tool_server" path="external/rkaiq_tool_server" remote="rockchip_android_s" />
   <project name="rk/rktoolbox" path="external/rktoolbox" remote="rockchip_android_s" />
 
   <!-- Framework repos -->
@@ -115,7 +114,6 @@
   <project name="rk/hardware/rk29/libbaseparameter" path="hardware/rockchip/libbaseparameter" remote="rockchip_android_s" />
   <project name="rk/hardware/rk29/libgraphicpolicy" path="hardware/rockchip/libgraphicpolicy" remote="rockchip_android_s" />
   <project name="rk/hardware/rk29/libhwjpeg" path="hardware/rockchip/libhwjpeg" remote="rockchip_android_s" />
-  <project name="rk/hardware/rk29/libiep" path="hardware/rockchip/libiep" remote="rockchip_android_s" />
   <project name="rk/hardware/rk29/libmemtrack" path="hardware/rockchip/libmemtrack" remote="rockchip_android_s" />
   <project name="rk/hardware/rk29/mpi-mmz" path="hardware/rockchip/libmpimmz" remote="rockchip_android_s" />
   <project name="linux/linux-rga" path="hardware/rockchip/librga" remote="rockchip_android_s" />
