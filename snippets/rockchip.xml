@@ -119,7 +119,6 @@
   <project name="linux/linux-rga" path="hardware/rockchip/librga" remote="rockchip_android_s" />
   <project name="rk/hardware/rk29/librkvpu" path="hardware/rockchip/librkvpu" remote="rockchip_android_s" />
   <project name="rk/hardware/rk29/lights_aidl" path="hardware/rockchip/light_aidl" remote="rockchip_android_s" />
-  <project name="rk/hardware/rk29/omx_il" path="hardware/rockchip/omx_il" remote="rockchip_android_s" />
   <project name="rk/hardware/rk29/optee" path="hardware/rockchip/optee" remote="rockchip_android_s" />
   <project name="rk/hardware/rk29/power_aidl" path="hardware/rockchip/power_aidl" remote="rockchip_android_s" />
   <project name="rk/hardware/rk29/sensor" path="hardware/rockchip/sensor" remote="rockchip_android_s" />
