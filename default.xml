@@ -1107,4 +1107,7 @@
   <!-- Remove unused AOSP repos -->
   <include name="snippets/remove.xml" />
 
+  <!-- Track rockchip repos -->
+  <include name="snippets/rockchip.xml" />
+
 </manifest>
