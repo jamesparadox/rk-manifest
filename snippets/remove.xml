@@ -5,9 +5,7 @@
     <remove-project name="device/generic/car"/>
     <remove-project name="device/generic/vulkan-cereal"/>
     <remove-project name="device/google/barbet"/>
-    <remove-project name="device/google/barbet-kernel"/>
     <remove-project name="device/google/barbet-sepolicy"/>
-    <remove-project name="device/google/bonito-kernel"/>
     <remove-project name="device/google/bramble"/>
     <remove-project name="device/google/bramble-sepolicy"/>
     <remove-project name="device/google/coral"/>
@@ -22,7 +20,6 @@
     <remove-project name="device/google/sunfish"/>
     <remove-project name="device/google/sunfish-kernel"/>
     <remove-project name="device/google/sunfish-sepolicy"/>
-    <remove-project name="device/google/crosshatch-kernel"/>
     <remove-project name="device/google/cuttlefish_prebuilts"/>
     <remove-project name="device/google/trout"/>
     <remove-project name="device/linaro/dragonboard"/>
@@ -30,8 +27,6 @@
     <remove-project name="device/linaro/hikey-kernel"/>
     <remove-project name="device/linaro/poplar"/>
     <remove-project name="device/linaro/poplar-kernel"/>
-    <remove-project name="device/mediatek/wembley-sepolicy"/>
-    <remove-project name="device/ti/beagle-x15-kernel"/>
 
     <!-- External repos -->
     <remove-project name="platform/external/e2fsprogs"/>
@@ -40,12 +35,15 @@
     <remove-project name="platform/external/libdrm"/>
     <remove-project name="platform/external/skia"/>
     <remove-project name="platform/external/speex"/>
+    <remove-project name="platform/external/sqlite"/>
     <remove-project name="platform/external/tinyalsa"/>
+    <remove-project name="platform/external/wpa_supplicant_8" />
     <remove-project name="platform/external/rust/crates/gdbstub_arch"/>
     <remove-project name="platform/external/TestParameterInjector"/>
     <remove-project name="platform/hardware/google/graphics/gs101"/>
 
     <!-- Kernel repos -->
+    <remove-project name="kernel/configs"/>
     <remove-project name="kernel/prebuilts/4.19/arm64"/>
     <remove-project name="kernel/prebuilts/5.4/arm64"/>
     <remove-project name="kernel/prebuilts/5.4/x86-64"/>
@@ -73,6 +71,7 @@
     <remove-project name="platform/frameworks/ex"/>
     <remove-project name="platform/frameworks/native"/>
     <remove-project name="platform/frameworks/opt/net/ethernet"/>
+    <remove-project name="platform/frameworks/opt/telephony" />
     <remove-project name="platform/frameworks/opt/net/wifi"/>
 
     <!-- Hardware repos -->
@@ -85,7 +84,6 @@
     <remove-project name="platform/packages/modules/NetworkStack"/>
     <remove-project name="platform/packages/modules/Wifi"/>
     <remove-project name="platform/packages/apps/Browser2"/>
-    <remove-project name="platform/packages/apps/Bluetooth"/>
     <remove-project name="platform/packages/apps/Camera2"/>
     <remove-project name="platform/packages/apps/DeskClock"/>
     <remove-project name="platform/packages/apps/Gallery2"/>
@@ -98,14 +96,16 @@
     <remove-project name="platform/packages/providers/MediaProvider"/>
     <remove-project name="platform/packages/wallpapers/LivePicker"/>
     <remove-project name="platform/packages/modules/Permission"/>
+    <remove-project name="platform/packages/services/Telephony"/>
     <remove-project name="platform/packages/screensavers/PhotoTable"/>
 
     <!-- System repos -->
     <remove-project name="platform/system/core"/>
     <remove-project name="platform/system/memory/libion"/>
     <remove-project name="platform/system/vold"/>
-    <remove-project name="platform/system/bt"/>
+    <remove-project name="platform/system/libhwbinder"/>
     <remove-project name="platform/system/media"/>
+    <remove-project name="platform/system/netd"/>
     <remove-project name="platform/system/sepolicy"/>
 
     <!-- Prebuilt repos -->
