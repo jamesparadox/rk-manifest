@@ -122,7 +122,6 @@
   <project name="rk/hardware/rk29/optee" path="hardware/rockchip/optee" remote="rockchip_android_s" />
   <project name="rk/hardware/rk29/power_aidl" path="hardware/rockchip/power_aidl" remote="rockchip_android_s" />
   <project name="rk/hardware/rk29/sensor" path="hardware/rockchip/sensor" remote="rockchip_android_s" />
-  <project name="rk/hardware/rk29/swiftshader" path="hardware/rockchip/swiftshader" remote="rockchip_android_s" />
   <project name="rk/hardware/rk29/thermal" path="hardware/rockchip/thermal" remote="rockchip_android_s" />
   <project name="rk/hardware/rk29/weaver" path="hardware/rockchip/weaver" remote="rockchip_android_s" />
   <project name="rk/hardware/rk35/einkhwc" path="hardware/rockchip/hwcomposer/einkhwc" remote="rockchip_android_s" />
