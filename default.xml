@@ -1319,6 +1319,8 @@
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
+  <!-- Remove unused AOSP repos -->
+  <include name="snippets/remove.xml" />
 
   <!--
     Merge marker to make it easier for git to merge AOSP-only manifest
