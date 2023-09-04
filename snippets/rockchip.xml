@@ -9,12 +9,12 @@
           revision="refs/tags/android-12.0-mid-rkr5" />
 
   <!-- Device repos -->
-  <project name="rk/device/rockchip/rk3288" path="device/rockchip/rk3288" remote="rockchip_android_r" />
+  <project name="rk/device/rockchip/rk3288" path="device/rockchip/rk3288" remote="rockchip_android" revision="refs/tags/android-11.0-mid-rkr11" />
   <project name="rk/device/rockchip/rk3326" path="device/rockchip/rk3326" remote="rockchip_android_r" />
-  <project name="rk/device/rockchip/rk3328" path="device/rockchip/rk3328" remote="rockchip_android_r" />
+  <project name="rk/device/rockchip/rk3328" path="device/rockchip/rk3328" remote="rockchip_android" revision="refs/tags/android-11.0-mid-rkr11" />
   <project name="rk/device/rockchip/rk3399" path="device/rockchip/rk3399" remote="rockchip_android_r" />
   <project name="rk/device/rockchip/rk3566" path="device/rockchip/rk356x" remote="rockchip_android_r" />
-  <project name="rk/device/rockchip/rk3568_box" path="device/rockchip/rk356x_box" remote="rockchip_android_r" />
+  <project name="rk/device/rockchip/rk3568_box" path="device/rockchip/rk356x_box" remote="rockchip_android" revision="refs/tags/android-11.0-mid-rkr11" />
   <project name="rk/device/rockchip/rksdk" path="device/rockchip/common" remote="rockchip_android_r" >
     <copyfile dest=".classpath" src=".classpath"/>
     <copyfile dest="mkimage.sh" src="mkimage.sh"/>
@@ -43,7 +43,7 @@
   <project name="rk/platform/external/ntfs-3g" path="external/ntfs-3g" remote="rockchip_android_r" />
   <project name="rk/platform/external/usb_modeswitch" path="external/usb_modeswitch" remote="rockchip_android_r" />
   <project name="rk/platform/system/rk_tee_user" path="external/rk_tee_user" remote="rockchip_android_r" />
-  <project name="linux/app/rkaiq_tool_server" path="external/rkaiq_tool_server" remote="rockchip_android_r" />
+  <project name="linux/app/rkaiq_tool_server" path="external/rkaiq_tool_server" remote="rockchip_android" revision="refs/tags/android-11.0-mid-rkr11" />
   <project name="rk/rktoolbox" path="external/rktoolbox" remote="rockchip_android_r" />
 
   <!-- Framework repos -->
@@ -107,23 +107,23 @@
   <project name="rk/hardware/rk29/libbaseparameter" path="hardware/rockchip/libbaseparameter" remote="rockchip_android_r" />
   <project name="rk/hardware/rk29/libgraphicpolicy" path="hardware/rockchip/libgraphicpolicy" remote="rockchip_android_r" />
   <project name="rk/hardware/rk29/libhwjpeg" path="hardware/rockchip/libhwjpeg" remote="rockchip_android_r" />
-  <project name="rk/hardware/rk29/libiep" path="hardware/rockchip/libiep" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/libiep" path="hardware/rockchip/libiep" remote="rockchip_android" revision="refs/tags/android-11.0-mid-rkr11" />
   <project name="rk/hardware/rk29/libmemtrack" path="hardware/rockchip/libmemtrack" remote="rockchip_android_r" />
   <project name="rk/hardware/rk29/mpi-mmz" path="hardware/rockchip/libmpimmz" remote="rockchip_android_r" />
   <project name="linux/linux-rga" path="hardware/rockchip/librga" remote="rockchip_android_r" />
   <project name="rk/hardware/rk29/librkvpu" path="hardware/rockchip/librkvpu" remote="rockchip_android_r" />
   <project name="rk/hardware/rk29/lights_aidl" path="hardware/rockchip/light_aidl" remote="rockchip_android_r" />
-  <project name="rk/hardware/rk29/omx_il" path="hardware/rockchip/omx_il" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/omx_il" path="hardware/rockchip/omx_il" remote="rockchip_android" revision="refs/tags/android-11.0-mid-rkr11" />
   <project name="rk/hardware/rk29/optee" path="hardware/rockchip/optee" remote="rockchip_android_r" />
   <project name="rk/hardware/rk29/power_aidl" path="hardware/rockchip/power_aidl" remote="rockchip_android_r" />
   <project name="rk/hardware/rk29/sensor" path="hardware/rockchip/sensor" remote="rockchip_android_r" />
-  <project name="rk/hardware/rk29/swiftshader" path="hardware/rockchip/swiftshader" remote="rockchip_android_r" />
+  <project name="rk/hardware/rk29/swiftshader" path="hardware/rockchip/swiftshader" remote="rockchip_android" revision="refs/tags/android-11.0-mid-rkr11" />
   <project name="rk/hardware/rk29/thermal" path="hardware/rockchip/thermal" remote="rockchip_android_r" />
   <project name="rk/hardware/rk29/weaver" path="hardware/rockchip/weaver" remote="rockchip_android_r" />
   <project name="rk/hardware/rk35/einkhwc" path="hardware/rockchip/hwcomposer/einkhwc" remote="rockchip_android_r" />
   <project name="rk/hardware/rk35/helper" path="hardware/rockchip/helper" remote="rockchip_android_r" />
   <project name="rk/hardware/rk35/hwcomposer2" path="hardware/rockchip/hwcomposer/drmhwc2" remote="rockchip_android_r" />
-  <project name="rk/rknn_server" path="hardware/rockchip/rknn_server" remote="rockchip_android_r" />
+  <project name="rk/rknn_server" path="hardware/rockchip/rknn_server" remote="rockchip_android" revision="refs/tags/android-11.0-mid-rkr11" />
 
   <!-- Kernel repos -->
   <project name="rk/kernel" path="kernel" remote="rockchip_android_r" />
@@ -148,9 +148,9 @@
   <project groups="pdk-fs" name="platform/packages/apps/Music" path="packages/apps/Music" remote="rockchip_android_r" />
   <project groups="pdk-fs" name="platform/packages/apps/Settings" path="packages/apps/Settings" remote="rockchip_android_r" />
   <project groups="pdk-fs" name="platform/packages/apps/SoundRecorder" path="packages/apps/SoundRecorder" remote="rockchip_android_r" />
-  <project name="platform/packages/apps/TvSettings" path="packages/apps/TvSettings" remote="rockchip_android_r" />
+  <project name="platform/packages/apps/TvSettings" path="packages/apps/TvSettings" remote="rockchip_android" revision="refs/tags/android-11.0-mid-rkr11" />
   <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/modules/NetworkStack" path="packages/modules/NetworkStack" remote="rockchip_android_r" />
-  <project name="platform/packages/providers/MediaProvider" path="packages/providers/MediaProvider" remote="rockchip_android_r" />
+  <project name="platform/packages/providers/MediaProvider" path="packages/providers/MediaProvider" remote="rockchip_android" revision="refs/tags/android-11.0-mid-rkr11" />
   <project name="platform/packages/services/Telephony" path="packages/services/Telephony" remote="rockchip_android_r" />
   <project name="rk/packages/apps/DisplayAdjust" path="packages/apps/DisplayAdjust" remote="rockchip_android_r" />
 
